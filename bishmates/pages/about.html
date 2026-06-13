@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Bishmates</title>
+  <meta name="description" content="Bishmates is an adventure platform built by people who actually go places. Learn our story." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .about-hero {
+      background: var(--navy);
+      padding: 80px 48px;
+      text-align: center;
+    }
+    .about-hero h1 {
+      font-family: var(--serif);
+      font-size: 52px;
+      color: var(--stone);
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+    .about-hero h1 em { color: var(--gold); }
+    .about-hero p {
+      color: var(--teal-lt);
+      font-size: 17px;
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .about-body {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 72px 32px;
+    }
+
+    .about-body p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.85;
+      margin-bottom: 20px;
+    }
+
+    .about-body h2 {
+      font-family: var(--serif);
+      font-size: 28px;
+      color: var(--brown);
+      margin: 48px 0 16px;
+      font-style: italic;
+    }
+
+    .mission-box {
+      background: var(--navy);
+      border-radius: 14px;
+      padding: 40px 44px;
+      margin: 48px 0;
+    }
+
+    .mission-box p {
+      font-family: var(--serif);
+      font-size: 24px;
+      color: var(--stone);
+      line-height: 1.5;
+      font-style: italic;
+      margin: 0;
+    }
+
+    .mission-box p em { color: var(--gold); font-style: normal; }
+
+    .apps-mini {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 32px 0;
+    }
+
+    .app-mini-card {
+      background: var(--card);
+      border: 1px solid var(--stone-dk);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .app-mini-card h4 {
+      font-family: var(--serif);
+      font-size: 20px;
+      color: var(--brown);
+      margin-bottom: 8px;
+    }
+
+    .app-mini-card p {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .app-mini-card a {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    @media (max-width: 700px) {
+      .about-hero { padding: 60px 20px; }
+      .about-hero h1 { font-size: 36px; }
+      .about-body { padding: 48px 20px; }
+      .mission-box { padding: 28px 24px; }
+      .mission-box p { font-size: 20px; }
+      .apps-mini { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">Bish<span>mates</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="apps.html">Apps</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+    </ul>
+    <a href="apps.html" class="nav-cta">Get Gearmates</a>
+  </nav>
+
+  <section class="about-hero">
+    <div class="eyebrow" style="color:var(--gold-lt);">Our story</div>
+    <h1>We go places.<br><em>We build things.</em></h1>
+    <p>Bishmates is an adventure platform built by people who were tired of bad tools ruining good trips.</p>
+  </section>
+
+  <div class="about-body">
+    <p>It started the same way every good idea does: something was missing, and nobody had fixed it yet.</p>
+    <p>Planning a trip meant bouncing between a notes app, a spreadsheet, a maps tab, a gear spreadsheet, and a group chat that had the important thing buried three hundred messages deep. Nothing talked to each other. Nothing remembered what you packed last time. Nothing cared about the actual experience.</p>
+    <p>So we started building.</p>
+
+    <div class="mission-box">
+      <p>"Make tools for people who <em>actually go</em> — not people who plan to someday."</p>
+    </div>
+
+    <h2>What we're building</h2>
+    <p>Bishmates is the home for a suite of adventure apps. Not a social network. Not a gear store. Just useful, honest tools that make the hard parts of going somewhere easier — so you can spend more time on the good parts.</p>
+
+    <div class="apps-mini">
+      <div class="app-mini-card">
+        <h4>Gearmates</h4>
+        <p>Your packing co-pilot. Build trip lists, track your gear, and share kits with anyone going with you. Available now on iOS.</p>
+        <a href="apps.html#gearmates">Get Gearmates →</a>
+      </div>
+      <div class="app-mini-card">
+        <h4>Waymates</h4>
+        <p>Road trip routing built around adventure. Find your way, log every mile, discover detours worth taking. Coming soon.</p>
+        <a href="apps.html#waymates">Join the waitlist →</a>
+      </div>
+    </div>
+
+    <h2>How we build</h2>
+    <p>We're privacy-first. No analytics SDKs. No advertising. No selling your data. When you use our apps without an account, nothing leaves your device. When you create an account, your data lives on secure infrastructure and is used for exactly one thing: making your experience work.</p>
+    <p>We're also small, which means we're careful. Every feature we ship is something we needed ourselves. We'd rather do a few things very well than everything poorly.</p>
+
+    <h2>What's next</h2>
+    <p>Gearmates is live. Waymates is in the works. And there are more mates on the horizon — each one built to solve a real problem for real adventurers. If you want to know when something new drops, join our waitlist below.</p>
+
+    <div style="margin-top: 40px; display: flex; gap: 14px; flex-wrap: wrap;">
+      <a href="apps.html" class="btn-dark">See all apps</a>
+      <a href="support.html" class="btn-outline" style="color:var(--navy); border-color:var(--stone-dk);">Get in touch</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="../index.html" class="footer-logo">Bishmates</a>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="apps.html">Apps</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+      </ul>
+    </div>
+    <p class="footer-copy">© 2026 Bishmates. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
