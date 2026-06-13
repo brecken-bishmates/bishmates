@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apps — Bishmates</title>
+  <meta name="description" content="Explore Gearmates and Waymates — adventure tools from Bishmates." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .apps-hero {
+      background: var(--navy);
+      padding: 72px 48px;
+      text-align: center;
+    }
+    .apps-hero h1 {
+      font-family: var(--serif);
+      font-size: 48px;
+      color: var(--stone);
+      margin-bottom: 14px;
+    }
+    .apps-hero h1 em { color: var(--gold); }
+    .apps-hero p {
+      color: var(--teal-lt);
+      font-size: 16px;
+      max-width: 460px;
+      margin: 0 auto;
+    }
+
+    .app-section {
+      padding: 72px 48px;
+    }
+
+    .app-section:nth-child(even) {
+      background: var(--stone-md);
+    }
+
+    .app-section-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .app-section-inner.reverse { direction: rtl; }
+    .app-section-inner.reverse > * { direction: ltr; }
+
+    .app-visual {
+      background: var(--card);
+      border: 1px solid var(--stone-dk);
+      border-radius: 20px;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 280px;
+    }
+
+    .app-info h2 {
+      font-family: var(--serif);
+      font-size: 38px;
+      color: var(--brown);
+      margin-bottom: 12px;
+      line-height: 1.15;
+    }
+
+    .app-info p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin: 20px 0 28px;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--body);
+      margin-bottom: 10px;
+    }
+
+    .feature-list li::before {
+      content: "✦";
+      color: var(--gold);
+      font-size: 12px;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    .status-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border-radius: 20px;
+      padding: 5px 14px;
+      margin-bottom: 16px;
+    }
+
+    .badge-live { background: #D4EDE5; color: #0F6E56; }
+    .badge-soon { background: #FAF0D4; color: #854F0B; }
+
+    .app-store-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--navy);
+      color: var(--stone);
+      border-radius: 10px;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .app-store-btn:hover { background: var(--navy-mid); }
+
+    .app-store-btn svg { flex-shrink: 0; }
+
+    .waitlist-inline {
+      background: var(--forest);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 8px;
+    }
+
+    .waitlist-inline p {
+      color: var(--forest-lt);
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .waitlist-inline form {
+      display: flex;
+      gap: 8px;
+    }
+
+    .waitlist-inline input {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 6px;
+      padding: 10px 14px;
+      color: var(--stone);
+      font-family: var(--sans);
+      font-size: 13px;
+      flex: 1;
+      outline: none;
+    }
+
+    .waitlist-inline input::placeholder { color: rgba(242,237,227,0.4); }
+    .waitlist-inline input:focus { border-color: var(--gold); }
+
+    .waitlist-inline button {
+      background: var(--gold);
+      color: var(--navy);
+      border: none;
+      border-radius: 6px;
+      padding: 10px 18px;
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 700px) {
+      .apps-hero { padding: 56px 20px; }
+      .apps-hero h1 { font-size: 34px; }
+      .app-section { padding: 48px 20px; }
+      .app-section-inner { grid-template-columns: 1fr; gap: 28px; }
+      .app-section-inner.reverse { direction: ltr; }
+      .waitlist-inline form { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">Bish<span>mates</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="apps.html" class="active">Apps</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+    </ul>
+    <a href="#gearmates" class="nav-cta">Get Gearmates</a>
+  </nav>
+
+  <section class="apps-hero">
+    <div class="eyebrow" style="color:var(--gold-lt);">Our apps</div>
+    <h1>Tools for the <em>journey.</em></h1>
+    <p>Each Bishmates app solves one problem really well. No bloat, no filler, no ads.</p>
+  </section>
+
+  <!-- GEARMATES -->
+  <section class="app-section" id="gearmates">
+    <div class="app-section-inner">
+      <div class="app-visual">
+        <svg width="160" height="200" viewBox="0 0 160 200" fill="none" aria-label="Gearmates app illustration">
+          <rect x="20" y="10" width="120" height="180" rx="16" fill="#F2EDE3" stroke="#D9CFBE" stroke-width="1.5"/>
+          <rect x="35" y="30" width="90" height="8" rx="4" fill="#1B2A3B"/>
+          <rect x="35" y="50" width="60" height="6" rx="3" fill="#D9CFBE"/>
+          <rect x="35" y="70" width="90" height="28" rx="8" fill="#FBF7EF" stroke="#D9CFBE" stroke-width="1"/>
+          <circle cx="48" cy="84" r="7" fill="#D4EDE5"/>
+          <rect x="62" y="78" width="50" height="5" rx="2.5" fill="#3A3530"/>
+          <rect x="62" y="87" width="36" height="4" rx="2" fill="#D9CFBE"/>
+          <rect x="35" y="108" width="90" height="28" rx="8" fill="#FBF7EF" stroke="#D9CFBE" stroke-width="1"/>
+          <circle cx="48" cy="122" r="7" fill="#FAF0D4"/>
+          <rect x="62" y="116" width="44" height="5" rx="2.5" fill="#3A3530"/>
+          <rect x="62" y="125" width="30" height="4" rx="2" fill="#D9CFBE"/>
+          <rect x="35" y="146" width="90" height="28" rx="8" fill="#FBF7EF" stroke="#D9CFBE" stroke-width="1"/>
+          <circle cx="48" cy="160" r="7" fill="#E6D4EF"/>
+          <rect x="62" y="154" width="56" height="5" rx="2.5" fill="#3A3530"/>
+          <rect x="62" y="163" width="40" height="4" rx="2" fill="#D9CFBE"/>
+        </svg>
+      </div>
+      <div class="app-info">
+        <span class="status-badge badge-live">Live on iOS</span>
+        <h2>Gearmates</h2>
+        <p>Your trip packing co-pilot. Build gear lists, track what you own, and share your kit with anyone heading out with you.</p>
+        <ul class="feature-list">
+          <li>Build and save gear lists for any trip type</li>
+          <li>Track your full gear inventory with condition notes</li>
+          <li>Assign gear to specific trips and travel companions</li>
+          <li>Works fully offline — no account needed</li>
+          <li>Sync across devices with a free account</li>
+          <li>"Find nearby shop" to locate gear stores on the go</li>
+        </ul>
+        <a href="https://apps.apple.com" class="app-store-btn" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Download on the App Store
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAYMATES -->
+  <section class="app-section" id="waymates">
+    <div class="app-section-inner reverse">
+      <div class="app-visual">
+        <svg width="200" height="180" viewBox="0 0 200 180" fill="none" aria-label="Waymates app illustration">
+          <circle cx="100" cy="90" r="75" stroke="#D9CFBE" stroke-width="1.5" fill="#F2EDE3"/>
+          <circle cx="100" cy="90" r="55" stroke="#D9CFBE" stroke-width="1" fill="none"/>
+          <circle cx="100" cy="90" r="35" stroke="#D9CFBE" stroke-width="0.8" fill="none"/>
+          <circle cx="100" cy="90" r="15" stroke="#D9CFBE" stroke-width="0.6" fill="none"/>
+          <circle cx="100" cy="90" r="5" fill="#C9A84C"/>
+          <line x1="100" y1="15" x2="100" y2="35" stroke="#1B2A3B" stroke-width="2"/>
+          <line x1="100" y1="145" x2="100" y2="165" stroke="#1B2A3B" stroke-width="2"/>
+          <line x1="25" y1="90" x2="45" y2="90" stroke="#1B2A3B" stroke-width="2"/>
+          <line x1="155" y1="90" x2="175" y2="90" stroke="#1B2A3B" stroke-width="2"/>
+          <path d="M70 55 Q100 40 130 60 Q120 90 100 90 Q80 90 70 55Z" fill="rgba(91,143,168,0.15)" stroke="#5B8FA8" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="app-info">
+        <span class="status-badge badge-soon">Coming soon</span>
+        <h2>Waymates</h2>
+        <p>Road trip routing built around the journey, not just the destination. Find your way, discover detours worth taking, and log every mile.</p>
+        <ul class="feature-list">
+          <li>Route planning built for road trippers</li>
+          <li>Discover hidden stops and detours along the way</li>
+          <li>Log and share trip journals with your crew</li>
+          <li>Works with Gearmates trip data seamlessly</li>
+          <li>Offline map support for off-grid routes</li>
+        </ul>
+        <div class="waitlist-inline">
+          <p>Be first to know when Waymates launches.</p>
+          <form onsubmit="return false;">
+            <input type="email" placeholder="your@email.com" aria-label="Email address" />
+            <button type="submit">Notify me</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="../index.html" class="footer-logo">Bishmates</a>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="apps.html">Apps</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+      </ul>
+    </div>
+    <p class="footer-copy">© 2026 Bishmates. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
